@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #caf0f8 0%, #48cae4 100%),
+    radial-gradient(at top center, #00b4d8 0%, #023e8a 100%) #90e0ef;
+  background-blend-mode: multiply, multiply;
+  font-family: "Varela Round", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.phone {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 3px 9px 9px 3px rgba(0, 0, 0, 0.45);
+  border-radius: 20px;
+  height: 720px;
+  width: 400px;
+}
+
+.phone .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: calc(100% - 60px);
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.phone .content.about {
+  background: url(image/bg1.jpg) no-repeat center center/cover;
+}
+.phone .content.blog {
+  background: url(image/bg2.jpg) no-repeat center center/cover;
+}
+.phone .content.map {
+  background: url(image/bg3.jpg) no-repeat center center/cover;
+}
+.phone .content.contact {
+  background: url(image/bg4.jpg) no-repeat center center/cover;
+}
+
+.phone .content.show {
+  opacity: 1;
+}
+
+.phone .content .text {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 4rem 1rem;
+  border-radius: 10px;
+}
+
+nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-top: -5px;
+  width: 100%;
+}
+
+nav ul {
+  background-color: #fff;
+  color: #333;
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+}
+
+nav li {
+  cursor: pointer;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul li p {
+  font-size: 12px;
+  margin: 2px 0;
+}
+
+nav ul li:hover,
+nav ul li.active {
+  color: red;
+}
